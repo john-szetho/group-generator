@@ -1,0 +1,10 @@
+@mixin surface-dark {
+  --colour-text: var(--palette-white);
+  --colour-text-muted: var(--palette-lavender);
+  --colour-bg: var(--palette-navy);
+  --colour-bg-soft: var(--palette-navy-light);
+  --colour-surface: var(--palette-navy);
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

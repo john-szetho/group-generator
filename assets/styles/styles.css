@@ -1,0 +1,462 @@
+@charset "UTF-8";
+/***
+    The new CSS reset - version 1.8.4 (last updated 14.2.2023)
+    GitHub page: https://github.com/elad2412/the-new-css-reset
+***/
+/*
+    Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+    - The "symbol *" part is to solve Firefox SVG sprite bug
+ */
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+  all: unset;
+  display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reapply the pointer cursor for anchor tags */
+a, button {
+  cursor: revert;
+}
+
+/* Remove list styles (bullets/numbers) */
+ol, ul, menu {
+  list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+  max-inline-size: 100%;
+  max-block-size: 100%;
+}
+
+/* removes spacing between cells in tables */
+table {
+  border-collapse: collapse;
+}
+
+/* Safari - solving issue when using user-select:none on the <body> text input doesn't working */
+input, textarea {
+  -webkit-user-select: auto;
+}
+
+/* revert the 'white-space' property for textarea elements on Safari */
+textarea {
+  white-space: revert;
+}
+
+/* minimum style to allow to style meter element */
+meter {
+  -webkit-appearance: revert;
+  appearance: revert;
+}
+
+/* preformatted text - use only for this feature */
+:where(pre) {
+  all: revert;
+}
+
+/* reset default text opacity of input placeholder */
+::placeholder {
+  color: unset;
+}
+
+/* remove default dot (•) sign */
+::marker {
+  content: initial;
+}
+
+/* fix the feature of 'hidden' attribute.
+   display:revert; revert to element instead of attribute */
+:where([hidden]) {
+  display: none;
+}
+
+/* revert for bug in Chromium browsers
+   - fix for the content editable attribute will work properly.
+   - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element*/
+:where([contenteditable]:not([contenteditable=false])) {
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+  -webkit-line-break: after-white-space;
+  -webkit-user-select: auto;
+}
+
+/* apply back the draggable feature - exist only in Chromium and Safari */
+:where([draggable=true]) {
+  -webkit-user-drag: element;
+}
+
+/* Revert Modal native behavior */
+:where(dialog:modal) {
+  all: revert;
+}
+
+@font-face {
+  font-family: "Arial";
+  src: url("../fonts/ArialNarrow.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Arial";
+  src: url("../fonts/ArialNarrowItalic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+}
+body,
+h1 {
+  font-family: "Arial Narrow", "Arial", Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#site-title,
+#randomiseBtn,
+h1,
+h2 {
+  text-transform: uppercase;
+}
+
+strong {
+  font-weight: 700;
+  font-style: bold;
+}
+
+#site-title,
+#randomiseBtn {
+  font-size: var(--font-size-lg);
+  line-height: var(--font-line-height-lg);
+}
+
+#randomiseBtn {
+  font-style: italic;
+}
+
+.center {
+  text-align: center;
+}
+
+.small,
+.excluded-roles {
+  font-size: var(--font-size-sm);
+  line-height: var(--font-line-height-sm);
+  text-transform: uppercase;
+}
+
+:root {
+  --base: 1.6vw;
+}
+@media (max-width: 1280px) {
+  :root {
+    --base: 21px;
+  }
+}
+@media (max-width: 600px) {
+  :root {
+    --base: 3.5vw;
+  }
+}
+:root {
+  --font-size-sm: calc(var(--base) * 0.8);
+  --font-size-base: var(--base);
+  --font-size-md: calc(var(--base) * 1.6);
+  --font-size-lg: calc(var(--base) * 2.8);
+  --font-line-height-sm: 112%;
+  --font-line-height-base: 112%;
+  --font-line-height-md: 116%;
+  --font-line-height-lg: 84%;
+  --font-letter-spacing-base: 0.01em;
+  --font-letter-spacing-wide: 0.06em;
+  --palette-black: #000;
+  --palette-white: #fff;
+  --palette-light-grey: #f5f5f5;
+  --palette-green: #a7cd1d;
+  --colour-text: var(--palette-black);
+  --colour-bg: var(--palette-white);
+  --colour-surface: var(--palette-white);
+  --colour-primary: var(--palette-black);
+  --colour-secondary: var(--palette-black);
+  --colour-accent: var(--palette-green);
+  --colour-panel: var(--palette-light-grey);
+  --space-2xs: 0.125rem;
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-base: 0.75rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 6rem;
+  --space-2xl: 10rem;
+  --padding-button: var(--space-sm);
+  --padding-button-sm: var(--space-xs);
+  --padding-button-back: 1rem;
+  --padding-button-sides: var(--space-md);
+  --padding-section: var(--space-base);
+  --padding-site: var(--space-sm);
+  --padding-main: var(--space-xl) var(--space-2xl);
+  --header-logo-width: var(--space-2xl);
+  --header-set-height: 4rem;
+  --hover-opacity: 0.5;
+  --placeholder-opacity: 0.25;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --stroke-base: 0.075rem dashed var(--colour-primary);
+}
+@media (max-width: 600px) {
+  :root {
+    --stroke-base: 0.1rem dashed var(--colour-primary);
+  }
+}
+:root {
+  --transition-fast: 0.2s;
+  --transition-base: 0.3s;
+  --transition-slow: 0.6s;
+  --shadow-md: 0 0 30px 0 var(--colour-accent);
+}
+@media (max-width: 600px) {
+  :root {
+    --shadow-md: 0 0 30px 0 var(--colour-accent);
+  }
+}
+
+html {
+  font-size: var(--font-size-base);
+  line-height: normal;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: var(--font-size-base);
+  line-height: var(--font-line-height-base);
+  letter-spacing: var(--font-letter-spacing-base);
+  background-color: var(--colour-bg);
+  color: var(--colour-text);
+}
+
+img {
+  height: auto;
+  width: 100%;
+}
+
+button {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  font: inherit;
+}
+
+a {
+  transition: color var(--transition-fast);
+}
+
+i {
+  font-style: italic;
+}
+
+.logo {
+  fill: var(--colour-primary);
+}
+
+span {
+  text-transform: lowercase;
+}
+
+::selection {
+  background: transparent;
+  color: var(--colour-accent);
+}
+
+input[type=text],
+input[type=number] {
+  field-sizing: content;
+}
+input[type=text]:focus,
+input[type=number]:focus {
+  background-color: var(--colour-accent);
+}
+
+li {
+  display: flex;
+  align-items: center;
+  column-gap: var(--space-xs);
+}
+
+.hide {
+  display: none;
+}
+
+button.disabled,
+li.disabled {
+  opacity: var(--placeholder-opacity);
+  cursor: no-drop;
+}
+
+.remove-btn {
+  font-size: var(--font-size-sm);
+  background-color: var(--colour-accent);
+  border-radius: 30px;
+  padding: 0.1rem;
+  width: 1rem;
+  height: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+body .site {
+  height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+body .site > * {
+  padding: var(--padding-section);
+}
+body .site #site-title,
+body .site #randomise {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  pointer-events: none;
+}
+body .site #site-title > *,
+body .site #randomise > * {
+  display: flex;
+  margin: 0 auto;
+  pointer-events: all;
+}
+@media (max-width: 600px) {
+  body .site #site-title > *,
+  body .site #randomise > * {
+    word-wrap: break-word;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+  }
+}
+body .site main {
+  position: relative;
+  display: flex;
+  gap: var(--space-base);
+  flex: 1;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+body .site main > * {
+  width: calc((100% - var(--space-base)) / 2);
+}
+@media (max-width: 800px) {
+  body .site main #options {
+    width: 35%;
+  }
+  body .site main #output-container {
+    width: 65%;
+  }
+}
+@media (max-width: 600px) {
+  body .site main {
+    flex-direction: column;
+  }
+  body .site main > * {
+    height: auto;
+  }
+  body .site main #options,
+  body .site main #output-container {
+    width: 100%;
+  }
+}
+body .site main #options {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--space-base);
+  padding: var(--padding-section);
+  background-color: var(--colour-panel);
+}
+body .site main #options .title {
+  display: none;
+}
+@media (max-width: 600px) {
+  body .site main #options .title {
+    display: block;
+  }
+}
+body .site main #options .group-size input[type=number]::-webkit-inner-spin-button, body .site main #options .group-size input[type=number]::-webkit-outer-spin-button {
+  opacity: 1;
+  margin-left: var(--space-xs);
+}
+body .site main #options #participants li .participant-excluded {
+  opacity: 0;
+  z-index: 100;
+}
+body .site main #options #participants li .participant-excluded::placeholder {
+  opacity: var(--placeholder-opacity);
+}
+body .site main #options #participants li:hover .participant-excluded {
+  opacity: 1;
+}
+body .site main #options #participants li .disabled input {
+  opacity: var(--placeholder-opacity);
+}
+body .site main #options #participants li .disabled ~ .participant-excluded {
+  opacity: 0 !important;
+}
+body .site main #options #participants li .participant-btn {
+  white-space: nowrap;
+}
+body .site main #options .group-roles ul.roles {
+  display: flex;
+  flex-direction: column;
+}
+body .site main #output-container {
+  position: relative;
+  font-size: var(--font-size-md);
+  line-height: var(--font-line-height-md);
+  background-color: var(--colour-panel);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-height: 100%;
+  overflow: scroll;
+  pointer-events: all;
+  padding: var(--padding-section);
+}
+body .site main #output-container .group-name {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  padding-bottom: var(--space-xs);
+  border-bottom: var(--stroke-base);
+}
+body .site main #output-container .roles {
+  padding-top: 0;
+}
+body .site main #output-container .roles li {
+  padding: var(--space-xs) 0;
+}
+body .site main #output-container .roles li:not(:first-of-type) {
+  border-top: var(--stroke-base);
+}
+body .site main #output-container .roles li:last-child {
+  padding-bottom: 0;
+}
+body .site main #output-container ul {
+  width: 100%;
+}
+body .site main #output-container ul li {
+  display: flex;
+  column-gap: var(--space-sm);
+}
+body .site main #output-container ul li p {
+  width: 100%;
+}
+
+/*# sourceMappingURL=styles.css.map */

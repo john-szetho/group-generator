@@ -1,0 +1,53 @@
+@font-face {
+  font-family: "Arial";
+  src: url("../fonts/ArialNarrow.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Arial";
+  src: url("../fonts/ArialNarrowItalic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+}
+
+body,
+h1 {
+  font-family: "Arial Narrow", "Arial", Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#site-title,
+#randomiseBtn,
+h1,
+h2 {
+  text-transform: uppercase;
+}
+
+strong {
+  font-weight: 700;
+  font-style: bold;
+}
+
+#site-title,
+#randomiseBtn {
+  font-size: var(--font-size-lg);
+  line-height: var(--font-line-height-lg);
+}
+
+#randomiseBtn {
+  font-style: italic;
+}
+
+.center {
+  text-align: center;
+}
+
+.small,
+.excluded-roles {
+  font-size: var(--font-size-sm);
+  line-height: var(--font-line-height-sm);
+  text-transform: uppercase;
+}

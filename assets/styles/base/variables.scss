@@ -1,0 +1,94 @@
+@use "./breakpoints" as *;
+
+:root {
+  // Base
+  --base: 1.6vw;
+
+  @include desktop {
+    --base: 21px;
+  }
+
+  @include mobile {
+    --base: 3.5vw;
+  }
+
+  // Base font sizes
+  --font-size-sm: calc(var(--base) * 0.8);
+  --font-size-base: var(--base);
+  --font-size-md: calc(var(--base) * 1.6);
+  --font-size-lg: calc(var(--base) * 2.8);
+
+  --font-line-height-sm: 112%;
+  --font-line-height-base: 112%;
+  --font-line-height-md: 116%;
+  --font-line-height-lg: 84%;
+
+  --font-letter-spacing-base: 0.01em;
+  --font-letter-spacing-wide: 0.06em;
+
+  // ── Palette (raw values, never used directly in components) ──
+  --palette-black: #000;
+  --palette-white: #fff;
+  --palette-light-grey: #f5f5f5;
+  --palette-green: #a7cd1d;
+
+  // ── Semantic tokens (default: light surface) ──
+  --colour-text: var(--palette-black);
+  --colour-bg: var(--palette-white);
+  --colour-surface: var(--palette-white);
+  --colour-primary: var(--palette-black);
+  --colour-secondary: var(--palette-black);
+  --colour-accent: var(--palette-green);
+  --colour-panel: var(--palette-light-grey);
+
+  // Spacing
+  --space-2xs: 0.125rem;
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-base: 0.75rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 6rem;
+  --space-2xl: 10rem;
+
+  // Padding
+  --padding-button: var(--space-sm);
+  --padding-button-sm: var(--space-xs);
+  --padding-button-back: 1rem;
+  --padding-button-sides: var(--space-md);
+  --padding-section: var(--space-base);
+  --padding-site: var(--space-sm);
+  --padding-main: var(--space-xl) var(--space-2xl);
+
+  // Header
+  --header-logo-width: var(--space-2xl);
+  --header-set-height: 4rem;
+
+  // States
+  --hover-opacity: 0.5;
+  --placeholder-opacity: 0.25;
+
+  // Border radius
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+
+  // Stroke
+  --stroke-base: 0.075rem dashed var(--colour-primary);
+
+  @include mobile {
+    --stroke-base: 0.1rem dashed var(--colour-primary);
+  }
+
+  // Transition timing
+  --transition-fast: 0.2s;
+  --transition-base: 0.3s;
+  --transition-slow: 0.6s;
+
+  // Shadows
+  --shadow-md: 0 0 30px 0 var(--colour-accent);
+
+  @include mobile {
+    --shadow-md: 0 0 30px 0 var(--colour-accent);
+  }
+}

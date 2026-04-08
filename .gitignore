@@ -7,14 +7,14 @@ Icon
 /.vscode
 /.idea
 
-/assets
+# /assets
 /content
 /content.zip
 /media
 /node_modules
 /composer.json
 /composer.lock
-/package.json
+# /package.json
 /package-lock.json
 /webpack.config.js
 

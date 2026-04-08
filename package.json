@@ -1,0 +1,12 @@
+{
+  "name": "code-jam-standalone",
+  "private": true,
+  "scripts": {
+    "start": "php -S localhost:8000",
+    "build": "sass assets/styles/main.scss assets/styles/styles.css",
+    "watch": "sass --watch assets/styles/main.scss assets/styles/styles.css"
+  },
+  "devDependencies": {
+    "sass": "^1.86.0"
+  }
+}
