@@ -1,0 +1,32 @@
+Icon
+.DS_Store
+/media/*
+!/media/index.html
+.lock
+*.sublime-workspace
+/.vscode
+/.idea
+
+/assets
+/content
+/content.zip
+/media
+/node_modules
+/composer.json
+/composer.lock
+/package.json
+/package-lock.json
+/webpack.config.js
+
+
+# -------------SECURITY-------------
+# NEVER publish these files via Git!
+# -------------SECURITY-------------
+
+/site/cache/*
+!/site/cache/index.html
+/site/accounts/*
+!/site/accounts/index.html
+/site/sessions/*
+!/site/sessions/index.html
+/site/config/.license

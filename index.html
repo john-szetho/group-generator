@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Group Generator</title>
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+    <link rel="stylesheet" href="assets/styles/styles.css" />
+    <meta name="title" content="Group Generator" />
+    <meta name="description" content="Code Jam Group Generator" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:title" content="Group Generator" />
+    <meta property="og:description" content="Code Jam Group Generator" />
+    <meta property="og:image" content="" />
+
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="" />
+    <meta property="twitter:title" content="Group Generator" />
+    <meta property="twitter:description" content="Code Jam Group Generator" />
+    <meta property="twitter:image" content="" />
+  </head>
+  <body>
+    <div class="site">
+      <div id="site-title">
+        <a
+          href="/"
+          onclick="
+            location.reload();
+            return false;
+          "
+          >Group Generator</a
+        >
+      </div>
+      <main>
+        <div id="options">
+          <div class="group-name">
+            <h2>Group Name</h2>
+            <input type="text" placeholder="Insert group name" id="group-name" />
+          </div>
+          <div class="group-size">
+            <h2>Per Group <span>(max.)</span></h2>
+            <input type="number" value="3" min="1" id="group-size" />
+          </div>
+          <div id="participants">
+            <h2>Participants</h2>
+            <ul id="participants-list"></ul>
+            <button class="add-btn" id="add-participant">+ Add</button>
+          </div>
+          <div class="group-roles">
+            <h2>Roles</h2>
+            <ul class="roles" id="roles-list"></ul>
+            <button class="add-btn" id="add-role">+ Add</button>
+          </div>
+        </div>
+        <div id="output-container">
+          <div class="roles-placeholder">
+            <p>Click <i>‘Randomise’</i> to generate groups</p>
+          </div>
+        </div>
+      </main>
+      <div id="randomise">
+        <button id="randomiseBtn">Randomise</button>
+      </div>
+    </main>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
