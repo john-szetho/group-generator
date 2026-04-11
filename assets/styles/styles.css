@@ -300,6 +300,10 @@ li.disabled {
   cursor: no-drop;
 }
 
+.add-btn {
+  cursor: copy;
+}
+
 .remove-btn {
   font-size: var(--font-size-sm);
   background-color: var(--colour-accent);
@@ -311,6 +315,11 @@ li.disabled {
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
+}
+
+#randomiseBtn:hover {
+  color: var(--colour-accent);
+  cursor: wait;
 }
 
 body .site {

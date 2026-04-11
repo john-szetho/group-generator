@@ -72,19 +72,9 @@ li.disabled {
   cursor: no-drop;
 }
 
-// .add-btn {
-//   font-size: var(--font-size-sm);
-//   text-transform: uppercase;
-//   color: var(--colour-accent);
-//   cursor: pointer;
-//   margin-top: var(--space-2xs);
-//   opacity: var(--hover-opacity);
-//   transition: opacity var(--transition-fast);
-
-//   &:hover {
-//     opacity: 1;
-//   }
-// }
+.add-btn {
+  cursor: copy;
+}
 
 .remove-btn {
   font-size: var(--font-size-sm);
@@ -97,4 +87,11 @@ li.disabled {
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
+}
+
+#randomiseBtn {
+  &:hover {
+    color: var(--colour-accent);
+    cursor: wait;
+  }
 }
