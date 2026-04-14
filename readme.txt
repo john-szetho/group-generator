@@ -1,9 +1,6 @@
-code jam group generator
+code jam group generator 🔮
 ························
-a group generator for code jams! set group parameters and choose what roles to
-assign to participants. it pulls from the input fields then outputs them via a
-randomiser script, so you can try different configurations for jamming with
-ur friends.
+set group parameters and choose what roles to assign to participants. it pulls from the input fields then outputs them via a randomiser script, so you can try different configurations for jamming with ur friends.
 
 demo: https://group-generator.johnszetho.com
 
