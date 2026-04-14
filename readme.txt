@@ -31,6 +31,6 @@ local setup
 3. start the local dev server:
     `npm start`
 
-  This runs a PHP development server at http://localhost:8000.
+  this runs a PHP development server at http://localhost:8000.
 
 4. open `http://localhost:8000` in your browser.
