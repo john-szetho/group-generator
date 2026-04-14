@@ -2,7 +2,7 @@ code jam group generator 🔮
 ························
 set group parameters and choose what roles to assign to participants. it pulls from the input fields then outputs them via a randomiser script, so you can try different configurations for jamming with ur friends.
 
-demo: https://group-generator.johnszetho.com
+demo: https://john-szetho.github.io/group-generator/
 
 
 how to use
