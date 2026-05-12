@@ -44,3 +44,4 @@ feature requests
 - live editable environment for audience engagement
 - oblique strategies-esque extension for prompting/themed jams
 - ability to bulk add names
+- refine interactions for mobile
