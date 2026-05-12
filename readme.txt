@@ -34,3 +34,13 @@ local setup
   this runs a PHP development server at http://localhost:8000.
 
 4. open `http://localhost:8000` in your browser.
+
+
+feature requests
+························
+- auto create flok envionment with groups
+- pulling functions from the strudel/hydra documentation as a preset for randomisation
+- audience input words/notes
+- live editable environment for audience engagement
+- oblique strategies-esque extension for prompting/themed jams
+- ability to bulk add names
